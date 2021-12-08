@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root{
+    --Pale-blue-color: hsl(225, 100%, 94%);
+    --Bright-blue-color: hsl(245, 75%, 52%);
+    --vPale-blue-color: hsl(225, 100%, 98%);
+    --Desaturated-blue-color: hsl(224, 23%, 55%);
+    --Dark-blue-color: hsl(223, 47%, 23%);
+    --Font-medium: 500;
+    --Font-semiBold: 700;
+    --Font-bold: 900;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.attribution{
+    font-size: 12px;
+    position: absolute;
+    left:-90px;
+    transform: rotate(-90deg);
+
+
+}
+
+html{
+    font-family: 'Red Hat Display', sans-serif;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.main__card{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--vPale-blue-color);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.card{
+    background: #ffffff;
+    width: 327px;
+    max-width:  450px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow:0px 15px 15px rgba(0,0,0,.1);
+}
+.card__image img{
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.card__title{
+    font-size: 18px;
+    font-weight: var(--Font-bold);
+    padding-top: 38px;
+    color: var(--Dark-blue-color);
+}
+.card__description{
+    margin: 0 auto;
+    width: 80%;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 2;
+    color: var(--Desaturated-blue-color);
+    padding: 30px 0 28px;
+}
+.card__plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--vPale-blue-color);
+    padding: 17px 16px 16px 16px;
+    border-radius: 10px;
+}
+.plan__price{
+    font-size: 11px;
+    font-weight: var(--Font-bold);
+    color: var(--Dark-blue-color);
+}
+.price{
+    display: block;
+    padding-top: 11px;
+    font-weight: var(--Font-medium);
+    color: var(--Desaturated-blue-color);
+}
+.card__plan a{
+    font-size: 11px;
+    font-weight: var(--Font-semiBold);
+    transition: all .2s linear
+}
+.card__plan a:hover{
+    color: #766CF1;
+    text-decoration: none;
+}
+.content__buttons{
+    padding: 24px 0 37px;
+    display: flex;
+    flex-direction: column;
+}
+.cta{
+    margin-bottom: 28px;
+    padding: 19px 65px 20px 65px;
+    border:none;
+    border-radius: 8px;
+    background-color: var(--Bright-blue-color);
+    color: #ffffff;
+    font-weight: 900;
+    letter-spacing: .5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color .2s linear;
+    box-shadow:0px 8px 15px hsla(245, 75%, 52%, 35%);
+}
+.cta:hover{
+    background-color: #766CF1;
+}
+.cancelLink{
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--Desaturated-blue-color);
+    transition: color .3s linear;
+}
+.cancelLink:hover{
+    color: #d42c2c;
+}
+@media screen and (min-width:967px){
+    .main__card{
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-size: cover;
+    }
+    .card{
+        background: #ffffff;
+        width: 450px;
+    }
+    .card__title{
+        padding-top: 53px;
+        font-size: 22px;
+    }
+    .card__description{
+        width: 73%;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 2;
+        color: var(--Desaturated-blue-color);
+        padding: 32px 0 24px;
+    }
+    .card__plan{
+        background-color: var(--vPale-blue-color);
+        padding: 25px;
+    }
+    .plan__price{
+        font-size: 16px;
+    }
+    .price{
+        padding-top: 15px;
+    }
+    .card__plan a{
+        font-size: 14px;
+    }
+    .cta{
+        margin-bottom: 36px;
+        padding: 19px 101px 20px 101px;      
+        font-size: 16px;
+
+    }
+    .cancelLink{
+        font-size: 16px;
+    }
+}
+
+@keyframes frame{
+    0%{
+        background-color: red;
+    }
+    100%{
+        background-color: red
+    }
+}
